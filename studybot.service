@@ -1,0 +1,12 @@
+[Unit]
+Description=StudyBot Telegram bot
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/studybot
+ExecStart=/opt/studybot/venv/bin/python bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
